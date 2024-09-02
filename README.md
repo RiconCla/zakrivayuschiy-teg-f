@@ -1,4 +1,4 @@
-# Стартовая конфигурация для настройки Pug
+# Закрывающий тег
 
 https://github.com/RiconCla/zakrivayuschiy-teg-f.git
 
