@@ -1,0 +1,12 @@
+footer.footer
+  button.button__save.button(type="button" onclick="window['dialog-save-memory'].showModal()" aria-controls="dialog-save-memory")
+    svg.floppy-icon(viewBox="0 0 21 21" aria-hidden="true")
+      use(href="./images/floppy.svg#floppy")
+    span.button__text Сохранить на память
+  dialog.dialog(id="dialog-save-memory")
+    svg.floppy-icon(viewBox="0 0 21 21" aria-hidden="true")
+      use(href="./images/floppy.svg#floppy")
+    p.dialog__text Вставьте дискету, чтобы продолжить
+    form.dialog__form(method="dialog")
+      button.button__form-close.button(type="submit" onclick="window['dialog-save-memory'].close()")
+        span.button__text ok

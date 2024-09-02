@@ -1,0 +1,15 @@
+header.header
+    a.header__logo &lt;/HTML&gt;
+    h1.header__heading закрывающий тег
+    nav.theme-menu.header__theme-menu
+      // Не меняйте разметку этого списка, иначе скрипты перестанут работать
+      ul.theme-menu__list
+        li.theme-menu__item
+          button.theme-menu__button(type='button' data-theme='dark').
+            Темно
+        li.theme-menu__item
+          button.theme-menu__button(type='button' data-theme='auto' disabled='').
+            Авто
+        li.theme-menu__item
+          button.theme-menu__button(type='button' data-theme='light').
+            Светло
