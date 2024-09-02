@@ -9,7 +9,6 @@ const mediaquery = require('postcss-combine-media-query');
 const cssnano = require('cssnano');
 const htmlMinify = require('html-minifier');
 const gulpPug = require('gulp-pug');
-const ghPages = require('gulp-gh-pages');
 
 function serve() {
   browserSync.init({
@@ -85,11 +84,6 @@ function clean() {
   return del('dist');
 }
 
-function deploy() {
-  return gulp.src('./dist/**/*')
-  .pipe(ghPages());
-};
-
 function watchFiles() {
   gulp.watch(['src/**/*.pug'], pug);
   // gulp.watch(['src/**/*.html'], html);
@@ -111,4 +105,3 @@ exports.build = build;
 exports.watchapp = watchapp;
 exports.default = watchapp;
 exports.pug = pug;
-export.deplay = deploy;
