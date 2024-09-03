@@ -1,17 +1,17 @@
 mixin card(title, spanText, imgUrlAvif, imgUrlWebp, typeFilter, imgUrl, altText, mainText, secondText)
   article.card
     h2.card__title= title 
-    .card__picture
+    figure.card__picture
       span.card__picture-watermark= spanText
       picture
         source(srcset= imgUrlAvif, type="image/avif")
         source(srcset= imgUrlWebp, type="image/webp")
         img(class=`card__picture-item ${typeFilter}` src=imgUrl alt=altText loading="lazy")
-    .card__content
-      p.card__paragraph-main= mainText
-      p.card__paragraph-second= secondText
+      figcaption.card__content
+        p.card__paragraph= mainText
+        p.card__paragraph= secondText
     .card__buttons
-      button.card__icon-button.button(type="button")
+      button.card__icon-button.button(type="button" aria-label="Мне нравится")
         svg.like-icon(fill='none' viewbox='0 0 39 36')
           g.heart
             path.contour(fill='var(--accent-color)' d='M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z')

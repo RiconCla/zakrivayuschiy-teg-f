@@ -15,7 +15,7 @@
 */
 
 .page {
-  font-family: var(--main-font, "Inter-Variable", serif);
+  font-family: var(--main-font, "Inter-Variable");
   background-color: var(--background-color, #fff);
   background-image: var(
     --background-gradient,
@@ -38,7 +38,7 @@
   margin: 100px auto;
   border: 2px solid var(--accent-color, #000);
   color: var(--accent-color);
-  font-family: var(--accent-font, "PressStart2P", serif);
+  font-family: var(--accent-font, "PressStart2P");
   font-weight: var(--text-font-weight, 400);
   text-transform: uppercase;
   background-color: var(--background-color, #fff);
@@ -63,13 +63,14 @@
 }
 
 .header__theme-menu {
-  margin: 25px auto;
+  margin-block: 25px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
+  padding-inline-start: 20px;
 }
 
 .theme-menu__button {
@@ -231,7 +232,7 @@
 .card__buttons {
   display: flex;
   justify-content: end;
-  gap: 12px;
+  gap: 4px;
   padding: 0 25px 25px;
 }
 
@@ -260,6 +261,9 @@
   font-size: 14px;
   transition: box-shadow ease 0.3s;
   max-inline-size: 130px;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
 }
 
 .card__icon-button:focus {
@@ -377,10 +381,12 @@
   width: 100%;
   min-height: 38px;
   border: 2px solid var(--accent-color);
-  padding: 12px clamp(7.15625rem, 6.7601rem + 1.6901vw, 8.28125rem);
+  padding: 12px 17px;
   color: var(--accent-color);
   text-transform: uppercase;
   background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
 }
 
 .floppy-icon {
